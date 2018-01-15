@@ -47,6 +47,7 @@
 		14670067200882BF00533D77 /* swiftTipsUsingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftTipsUsingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1467006B200882BF00533D77 /* swiftTipsUsingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftTipsUsingUITests.swift; sourceTree = "<group>"; };
 		1467006D200882BF00533D77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14670079200891AF00533D77 /* SwiftTipsUsing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftTipsUsing.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 		1467003F200882BF00533D77 = {
 			isa = PBXGroup;
 			children = (
+				14670079200891AF00533D77 /* SwiftTipsUsing.playground */,
 				1467004A200882BF00533D77 /* swiftTipsUsing */,
 				1467005F200882BF00533D77 /* swiftTipsUsingTests */,
 				1467006A200882BF00533D77 /* swiftTipsUsingUITests */,
