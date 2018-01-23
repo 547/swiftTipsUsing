@@ -153,26 +153,6 @@ func deferTest(name:String) {
 }
 //deferTest(name: "")
 
-//MARK:使用 关键字defer 和 block PS:defer 和 block 放在一起同样有效
-func deferAndBlockTest() {
-    let array = [1,2,3,4]
-    print("start")
-    defer {
-        print("func defer 1")
-    }
-    array.forEach { (item) in
-        defer {
-            print("in block")
-        }
-        print("block === \(item)")
-    }
-    defer {
-        print("func defer 2")
-    }
-    print("end")
-}
-deferAndBlockTest()
-
 
 
 
