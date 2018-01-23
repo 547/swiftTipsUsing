@@ -103,14 +103,55 @@ workItem.cancel()
 
 
 //MARK:use #8 Passing functions & operators as closures (数组排序（sorted） + 运算符)
-let numbers = [2, 3, 9, 8, 25]
-let sorted = numbers.sorted(by: >)
+let numbers = [2, 3, 9, 8, 25, 3, 15, 3]
+//let sorted = numbers.sorted(by: >)
+var count = 0
+
 
 
 
 
 //MARK:use autoclosure
 String.test(block: 1 >  3)
+
+var newNumbers = [Int]()
+for (index,item) in numbers.enumerated() where item == 3 {
+    newNumbers.append(index)
+}
+print(newNumbers)
+
+//MARK:使用 关键字defer
+/* 延缓推迟,相当于把操作放入栈中，后加入的先执行
+ *
+ * 并不是函数结束时开始执行defer栈推出操作，而是每当一个作用域结束就进行该作用域defer执行
+ *
+ * 同一作用域中执行栈中的defer操作，按后进先出的执行顺序
+ */
+func deferTest(name:String) {
+    
+    //作用域1整个函数是作用域
+    print("1-1")
+    if name == "" {
+        //作用域2 if作用域
+        print("2-1")
+        defer {print("2-2")}
+        print("2-3")
+    }
+    print("1-2")
+    defer {print("1-3")}
+    print("1-4")
+    if name == "hello" {
+        //作用域3
+        print("3-1")
+        defer {print("3-2")}
+        print("3-3")
+        defer {print("3-4")}
+    }
+    print("1-5")
+    defer {print("1-6")}
+    
+}
+deferTest(name: "")
 
 
 
